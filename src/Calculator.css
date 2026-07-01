@@ -1,5 +1,5 @@
 .calculator {
-  width: min(100%, 320px);
+  width: min(100%, 360px);
   background: #1e1e2f;
   border-radius: 1.25rem;
   padding: 1.25rem;
@@ -8,26 +8,47 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
-.display {
+.display-panel {
   background: #12121c;
   border-radius: 0.75rem;
-  padding: 1.25rem 1rem;
+  padding: 0.75rem 1rem 1rem;
   margin-bottom: 1rem;
   text-align: right;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  min-height: 5.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+
+.expression {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #8d99ae;
+  min-height: 1.25rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.display {
   font-size: 2.5rem;
   font-weight: 300;
-  min-height: 4rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   color: #f1faee;
-  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .keypad {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 0.625rem;
+}
+
+.keypad-sci {
+  margin-bottom: 0.625rem;
 }
 
 .btn {
@@ -40,6 +61,11 @@
   background: #2d2d44;
   color: #f1faee;
   transition: background 0.15s, transform 0.1s;
+}
+
+.keypad-sci .btn {
+  padding: 0.85rem 0.5rem;
+  font-size: 0.95rem;
 }
 
 .btn:hover {
@@ -57,6 +83,15 @@
 
 .btn-fn:hover {
   background: #5a5a7a;
+}
+
+.btn-sci {
+  background: #2a4a5c;
+  color: #a8dadc;
+}
+
+.btn-sci:hover {
+  background: #3a5a6c;
 }
 
 .btn-op {
