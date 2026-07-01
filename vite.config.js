@@ -6,5 +6,6 @@ export default defineConfig({
   server: {
     host: true,
     port: 5173,
+    allowedHosts: ['test-cursor-904290779909.europe-west1.run.app']
   },
 });
